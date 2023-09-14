@@ -83,4 +83,4 @@ production:
   <<: *default
   database: helper_methods_1_and_2_production
   username: helper_methods_1_and_2
-  password: <%= ENV["GETTING_STARTED_WITH_SCAFFOLDS_DATABASE_PASSWORD"] %>
+  password: <%= ENV["HELPER_METHODS_1_AND_2_DATABASE_PASSWORD"] %>
