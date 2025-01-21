@@ -9,8 +9,8 @@ Rails.application.routes.draw do
   # Routes for the Movie resource:
 
   # CREATE
-  post"/movies",  controller: "movies", action: "create"
-  get"/movies/new",  controller: "movies", action: "new" 
+  post"/movies",  controller: "movies", action: "create" , as: :movies
+  get"/movies/new",  controller: "movies", action: "new" , as: :new_movie
 
   post "/movies" => "movies#create"
   get "/movies/new" => "movies#new"
@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   # READ
 
   get "/movies" => "movies#index"
-  get "/movies/:id" => "movies#show"
+  get "/movies/:id" => "movies#show", as: :movie
 
 
   get"/movies", controller: "movies", action: "index" 
@@ -29,7 +29,7 @@ Rails.application.routes.draw do
   # UPDATE
 
   patch "/movies/:id" => "movies#update"
-  get "/movies/:id/edit" => "movies#edit"
+  get "/movies/:id/edit" => "movies#edit", as: :edit_movie
 
   patch"/movies/:id", controller: "movies", action: "update" 
   get"/movies/:id/edit", controller: "movies", action: "edit" 
