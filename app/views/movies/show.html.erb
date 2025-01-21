@@ -16,7 +16,7 @@
 
       <div>
 
-        <%= link_to 'Delete movie', movie_path(@the_movie.id) %>
+        <%= link_to 'Delete movie', movie_path(@the_movie.id), data: { turbo_method: :delete }  %>
       </div>
     </div>
 
